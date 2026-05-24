@@ -1,179 +1,155 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alo Jetak</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family: "Segoe UI", Tahoma, sans-serif;
-    }
+<title>ألو جيتك</title>
 
-    body{
-      height:100vh;
-      background: linear-gradient(135deg,#0f172a,#1e293b,#334155);
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      overflow:hidden;
-      color:white;
-    }
+<style>
 
-    .container{
-      width:90%;
-      max-width:420px;
-      background:rgba(255,255,255,0.08);
-      backdrop-filter: blur(18px);
-      border:1px solid rgba(255,255,255,0.12);
-      border-radius:28px;
-      padding:40px 30px;
-      text-align:center;
-      box-shadow:0 10px 40px rgba(0,0,0,0.35);
-      animation:fadeIn 1s ease;
-    }
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#0f172a;
+    font-family:Arial,sans-serif;
+    color:white;
+    overflow:hidden;
+}
 
-    .logo{
-      width:110px;
-      height:110px;
-      border-radius:24px;
-      margin:auto;
-      margin-bottom:22px;
-      object-fit:cover;
-      box-shadow:0 8px 25px rgba(0,0,0,0.35);
-    }
+.card{
+    width:90%;
+    max-width:400px;
+    background:#1e293b;
+    padding:40px 30px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
 
-    h1{
-      font-size:30px;
-      margin-bottom:12px;
-      font-weight:700;
-    }
+.logo{
+    width:110px;
+    height:110px;
+    border-radius:24px;
+    object-fit:cover;
+    margin-bottom:20px;
+}
 
-    p{
-      opacity:.85;
-      line-height:1.8;
-      font-size:15px;
-      margin-bottom:30px;
-    }
+h1{
+    margin:0;
+    font-size:32px;
+}
 
-    .loader{
-      width:55px;
-      height:55px;
-      border:4px solid rgba(255,255,255,0.15);
-      border-top:4px solid white;
-      border-radius:50%;
-      margin:auto;
-      animation:spin 1s linear infinite;
-    }
+p{
+    opacity:.8;
+    margin-top:12px;
+    line-height:1.8;
+}
 
-    .stores{
-      display:flex;
-      justify-content:center;
-      gap:14px;
-      margin-top:30px;
-      flex-wrap:wrap;
-    }
+.loader{
+    width:55px;
+    height:55px;
+    border:5px solid rgba(255,255,255,.15);
+    border-top:5px solid white;
+    border-radius:50%;
+    margin:30px auto 0;
+    animation:spin 1s linear infinite;
+}
 
-    .btn{
-      padding:12px 20px;
-      border-radius:14px;
-      text-decoration:none;
-      color:white;
-      font-weight:600;
-      transition:.3s;
-      border:1px solid rgba(255,255,255,0.15);
-      background:rgba(255,255,255,0.08);
-    }
-
-    .btn:hover{
-      transform:translateY(-3px);
-      background:rgba(255,255,255,0.15);
-    }
-
-    @keyframes spin{
-      100%{
+@keyframes spin{
+    100%{
         transform:rotate(360deg);
-      }
     }
+}
 
-    @keyframes fadeIn{
-      from{
-        opacity:0;
-        transform:translateY(20px);
-      }
-      to{
-        opacity:1;
-        transform:translateY(0);
-      }
-    }
-  </style>
+.links{
+    margin-top:35px;
+    display:flex;
+    gap:12px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.links a{
+    text-decoration:none;
+    color:white;
+    padding:12px 18px;
+    border-radius:14px;
+    background:#334155;
+    transition:.3s;
+}
+
+.links a:hover{
+    background:#475569;
+}
+
+</style>
 </head>
 
 <body>
 
-  <div class="container">
+<div class="card">
 
-    <!-- ضع رابط لوجو التطبيق هنا -->
+    <!-- حط رابط شعار التطبيق -->
     <img
-      class="logo"
-      src="https://play-lh.googleusercontent.com/your-logo.png"
-      alt="Alo Jetak"
-    />
+        class="logo"
+        src="https://via.placeholder.com/110"
+        alt="Alo Jetak"
+    >
 
     <h1>ألو جيتك</h1>
 
     <p>
-      جاري تحويلك إلى متجر التطبيق المناسب لجهازك...
+        جاري تحويلك إلى متجر التطبيق المناسب...
     </p>
 
     <div class="loader"></div>
 
-    <div class="stores">
-      <a class="btn" href="https://play.google.com/store/apps/details?id=com.alojetak.app">
-        Google Play
-      </a>
+    <div class="links">
+        <a href="https://play.google.com/store/apps/details?id=com.alojetak.app">
+            Google Play
+        </a>
 
-      <a class="btn" href="https://apps.apple.com/il/app/%D8%A3%D9%84%D9%88-%D8%AC%D9%8A%D8%AA%D9%83/id6756861614">
-        App Store
-      </a>
+        <a href="https://apps.apple.com/il/app/%D8%A3%D9%84%D9%88-%D8%AC%D9%8A%D8%AA%D9%83/id6756861614">
+            App Store
+        </a>
     </div>
 
-  </div>
+</div>
 
-  <script>
+<script>
 
-    const androidLink =
-      "https://play.google.com/store/apps/details?id=com.alojetak.app";
+const playStore =
+"https://play.google.com/store/apps/details?id=com.alojetak.app";
 
-    const iosLink =
-      "https://apps.apple.com/il/app/%D8%A3%D9%84%D9%88-%D8%AC%D9%8A%D8%AA%D9%83/id6756861614";
+const appStore =
+"https://apps.apple.com/il/app/%D8%A3%D9%84%D9%88-%D8%AC%D9%8A%D8%AA%D9%83/id6756861614";
 
-    const userAgent =
-      navigator.userAgent || navigator.vendor || window.opera;
+const ua = navigator.userAgent || navigator.vendor || window.opera;
 
-    setTimeout(() => {
+setTimeout(() => {
 
-      if (/android/i.test(userAgent)) {
+    if (/android/i.test(ua)) {
 
-        window.location.href = androidLink;
+        window.location.replace(playStore);
 
-      } else if (/iPad|iPhone|iPod/.test(userAgent)
-        && !window.MSStream) {
+    } else if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
 
-        window.location.href = iosLink;
+        window.location.replace(appStore);
 
-      } else {
+    } else {
 
-        // لو جهاز كمبيوتر أو غير معروف
-        window.location.href = androidLink;
-      }
+        // أجهزة الكمبيوتر
+        window.location.replace(playStore);
 
-    }, 1800);
+    }
 
-  </script>
+}, 1500);
+
+</script>
 
 </body>
 </html>
