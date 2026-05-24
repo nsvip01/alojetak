@@ -3,8 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>ألو جيتك</title>
+
+<script>
+
+const android =
+"https://play.google.com/store/apps/details?id=com.alojetak.app";
+
+const ios =
+"https://apps.apple.com/il/app/%D8%A3%D9%84%D9%88-%D8%AC%D9%8A%D8%AA%D9%83/id6756861614";
+
+const ua = navigator.userAgent || navigator.vendor || window.opera;
+
+if (/android/i.test(ua)) {
+
+    window.location.href = android;
+
+} else if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+
+    window.location.href = ios;
+
+} else {
+
+    window.location.href = android;
+
+}
+
+</script>
 
 <style>
 
@@ -12,50 +37,24 @@ body{
     margin:0;
     height:100vh;
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
     background:#0f172a;
-    font-family:Arial,sans-serif;
     color:white;
-    overflow:hidden;
+    font-family:Arial;
 }
 
-.card{
-    width:90%;
-    max-width:400px;
-    background:#1e293b;
-    padding:40px 30px;
-    border-radius:25px;
+.box{
     text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,.3);
-}
-
-.logo{
-    width:110px;
-    height:110px;
-    border-radius:24px;
-    object-fit:cover;
-    margin-bottom:20px;
-}
-
-h1{
-    margin:0;
-    font-size:32px;
-}
-
-p{
-    opacity:.8;
-    margin-top:12px;
-    line-height:1.8;
 }
 
 .loader{
-    width:55px;
-    height:55px;
-    border:5px solid rgba(255,255,255,.15);
+    width:60px;
+    height:60px;
+    border:5px solid rgba(255,255,255,.2);
     border-top:5px solid white;
     border-radius:50%;
-    margin:30px auto 0;
+    margin:auto;
     animation:spin 1s linear infinite;
 }
 
@@ -65,91 +64,16 @@ p{
     }
 }
 
-.links{
-    margin-top:35px;
-    display:flex;
-    gap:12px;
-    justify-content:center;
-    flex-wrap:wrap;
-}
-
-.links a{
-    text-decoration:none;
-    color:white;
-    padding:12px 18px;
-    border-radius:14px;
-    background:#334155;
-    transition:.3s;
-}
-
-.links a:hover{
-    background:#475569;
-}
-
 </style>
 </head>
 
 <body>
 
-<div class="card">
-
-    <!-- حط رابط شعار التطبيق -->
-    <img
-        class="logo"
-        src="https://via.placeholder.com/110"
-        alt="Alo Jetak"
-    >
-
+<div class="box">
     <h1>ألو جيتك</h1>
-
-    <p>
-        جاري تحويلك إلى متجر التطبيق المناسب...
-    </p>
-
+    <p>جاري التحويل...</p>
     <div class="loader"></div>
-
-    <div class="links">
-        <a href="https://play.google.com/store/apps/details?id=com.alojetak.app">
-            Google Play
-        </a>
-
-        <a href="https://apps.apple.com/il/app/%D8%A3%D9%84%D9%88-%D8%AC%D9%8A%D8%AA%D9%83/id6756861614">
-            App Store
-        </a>
-    </div>
-
 </div>
-
-<script>
-
-const playStore =
-"https://play.google.com/store/apps/details?id=com.alojetak.app";
-
-const appStore =
-"https://apps.apple.com/il/app/%D8%A3%D9%84%D9%88-%D8%AC%D9%8A%D8%AA%D9%83/id6756861614";
-
-const ua = navigator.userAgent || navigator.vendor || window.opera;
-
-setTimeout(() => {
-
-    if (/android/i.test(ua)) {
-
-        window.location.replace(playStore);
-
-    } else if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
-
-        window.location.replace(appStore);
-
-    } else {
-
-        // أجهزة الكمبيوتر
-        window.location.replace(playStore);
-
-    }
-
-}, 1500);
-
-</script>
 
 </body>
 </html>
